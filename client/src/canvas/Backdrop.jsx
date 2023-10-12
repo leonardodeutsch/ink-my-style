@@ -14,13 +14,13 @@ const Backdrop = () => {
       temporal
       frames={100}
       alphaTest={0.35}
-      scale={10}
+      scale={3}
       rotation={[Math.PI / 2, 0, 0]}
     >
       <RandomizedLight
-        amount={4}
+        amount={3}
         radius={9}
-        intensity={0.55}
+        intensity={0.95}
         ambient={0.25}
         position={[5, 5, -10]}
       />
