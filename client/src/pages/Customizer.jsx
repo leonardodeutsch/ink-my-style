@@ -73,6 +73,10 @@ const Customizer = () => {
     }
   }
 
+  const handleActiveEditorTab = (tabName) => {
+    tabName === activeEditorTab ? setActiveEditorTab('') : setActiveEditorTab(tabName);
+  }
+
   const handleActiveFilterTab = (tabName) => {
     switch (tabName) {
       case 'logoShirt':
@@ -118,7 +122,7 @@ const Customizer = () => {
                   <Tab
                     key={tab.name}
                     tab={tab}
-                    handleClick={() => setActiveEditorTab(tab.name)}
+                    handleClick={() => handleActiveEditorTab(tab.name)}
                   />
                 ))}
                 {generateTabContent()}
